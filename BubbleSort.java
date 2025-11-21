@@ -21,4 +21,27 @@ public class BubbleSort {
             swapped = false;
 
             // Inner loop for comparing adjacent elements
-            for (int j = 0; j <
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j + 1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+
+                    swapped = true; // Mark that a swap happened
+                }
+            }
+
+            // If no swap happened in this pass, array is already sorted
+            if (!swapped) break;
+        }
+    }
+
+    // Helper function to print array
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
