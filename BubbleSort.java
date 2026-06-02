@@ -15,12 +15,8 @@ public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
         boolean swapped;
-
-        // Outer loop for passes
         for (int i = 0; i < n - 1; i++) {
             swapped = false;
-
-            // Inner loop for comparing adjacent elements
             for (int j = 0; j < n - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     // Swap arr[j] and arr[j + 1]
@@ -28,7 +24,7 @@ public class BubbleSort {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
 
-                    swapped = true; // Mark that a swap happened
+                    swapped = true; 
                 }
             }
 
